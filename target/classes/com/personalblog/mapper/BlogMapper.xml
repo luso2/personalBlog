@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.personalblog.mapper.BlogMapper">
+
+    <insert id="add"   parameterType="Blog" useGeneratedKeys="true" keyProperty="id">
+        insert into blog(title,content,`type`,blogger_id,praise_num,publish_time)
+        values(#{title},#{content},#{type},#{bloggerId},#{praiseNum},#{publishTime})
+    </insert>
+
+    <update id="delete" parameterType="int">
+        update blog set flag = 1 where  id = #{blogId}
+    </update>
+
+    <update id="update" parameterType="Blog">
+        update blog set title=#{title},content=#{content},`type`=#{type},praise_num =#{praiseNum}
+    </update>
+
+    <update id="setParise">
+        update blog set praise_num = #{pariseNum} where id = #{blogId}
+    </update>
+
+    <update id="setViewNum">
+        update blog set view_num = #{viewNum} where id = #{blogId}
+    </update>
+
+    <select id="getBlogNum" resultType="int">
+        select count(1) from blog where flag = 0;
+    </select>
+
+    <select id="getBlogNumByType" resultType="int" parameterType="String">
+        select count(1) from blog where type = #{type} and flag = 0;
+    </select>
+    <select id="getBlogNumByBloggerId" resultType="int" parameterType="int">
+        select count(1) from blog where blogger_id = #{bloggerId} and flag = 0;
+    </select>
+
+    <resultMap id="blogResultMap" type="Blog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="type" column="type"/>
+        <result property="praiseNum" column="praise_num"/>
+        <result property="bloggerId" column="blogger_id"/>
+        <result property="viewNum" column="view_num"/>
+    </resultMap>
+
+    <select id="getBlogById" resultMap="blogResultMap" parameterType="int">
+        select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from blog b where id =#{blogId}
+    </select>
+
+    <select id="getBlogByTitle" parameterType="String" resultMap="blogResultMap">
+        select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from blog b where title =#{blogTitle}  and flag = 0
+    </select>
+
+    <select id="getBlogsByType" resultMap="blogResultMap" parameterType="String">
+        select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from blog b where type =#{blogType} and flag = 0
+    </select>
+
+    <select id="getBlogsByPraiseNum" resultMap="blogResultMap">
+        select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from (select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from blog b where flag = 0 order by praise_num DESC) b limit 10
+    </select>
+
+    <select id="getBlogsByBloggerId" resultMap="blogResultMap" parameterType="int">
+        select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from blog b where blogger_id = #{bloggerId} and flag = 0
+    </select>
+
+    <select id="pagingByType" resultMap="blogResultMap">
+        select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from blog b where type = #{type} and flag = 0 limit #{page.start},#{page.onePageNum}
+    </select>
+
+    <select id="pagingByBloggerId" resultMap="blogResultMap">
+        select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from blog b where blogger_id = #{bloggerId} and flag = 0 limit #{page.start},#{page.onePageNum}
+    </select>
+
+    <select id="getNewBlogs" resultMap="blogResultMap">
+        select b.id,b.title,b.content,b.type,b.publish_time,b.praise_num,b.blogger_id,b.view_num from (select  b.id,b.title,b.content,b.publish_time,b.type,b.praise_num,b.blogger_id,b.view_num from blog b where flag = 0 order by publish_time DESC) b limit 12
+    </select>
+</mapper>

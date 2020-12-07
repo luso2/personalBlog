@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.personalblog.mapper.AttentionMapper">
+    <insert id="add">
+        insert into attention values(#{focusId},#{beFocusedId})
+    </insert>
+
+    <delete id="delete">
+        delete from attention where focus_id = #{focusId} and be_focused_id = #{beFocusedId}
+    </delete>
+
+    <select id="getAttentionNum" parameterType="int" resultType="int">
+        select count(1) from attention where be_focused_id = #{bloggerId};
+    </select>
+    <select id="getAttentionNumByBlogger" parameterType="int" resultType="int">
+        select count(1) from attention where focus_id = #{bloggerId};
+    </select>
+
+    <select id="getAttentions" parameterType="int" resultType="int">
+        select be_focused_id from attention where focus_id = #{bloggerId}
+    </select>
+
+    <select id="checkAttention" resultType="int">
+        select count(1) from attention where focus_id = #{focusId} and be_focused_id = #{beFocusedId}
+    </select>
+
+    <select id="pagingAttention" resultType="int" >
+        select be_focused_id from attention where focus_id = #{bloggerId} limit #{page.start},#{page.onePageNum}
+    </select>
+</mapper>

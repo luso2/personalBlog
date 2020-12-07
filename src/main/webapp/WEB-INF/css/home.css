@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.mainbody {
+	width: 1350px;
+	height: auto;
+	margin: 0 auto;
+}
+.left {
+	float: left;
+	width: 350px;
+	height: 100%;
+}
+.left ul {
+	width: 320px;
+	height: 100%;
+	margin: 0 auto;
+}
+.rectangle {
+	width: 10px;
+	height: 10px;
+	background-color: #FA8072;
+	margin: 0 auto;
+	border-radius: 20px;
+}
+.rectangle2 {
+	width: 10px;
+	height: 10px;
+	margin: 0 auto;
+	border-radius: 20px;
+	background-color: #40E0D0;
+}
+.left ul li {
+	display: block;
+	width: 100%;
+	height: 40px;
+	background-color: #FFA07A;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 40px;
+	font-weight: bold;
+	color: #380357;
+	cursor: pointer;
+}
+.left ul a {
+	text-decoration: none;
+}
+.left ul li:hover {
+	font-size: 20px;
+	background-color: #FFFACD;
+}
+.right {
+	float: left;
+	width: 1000px;
+}
+.personalMsg {
+	width: 998px;
+	height: 100%;
+	background-color: white;
+	border-left: 1px solid #DCDCDC;
+	border-right: 1px solid #DCDCDC;
+	background-color: #FDF5E6;
+}
+.personalMsg-top {
+	width: 100%;
+	height: 170px;
+}
+.personalMsg-top img {
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+	margin-left: 459px;
+	margin-top: 20px;
+}
+.personalMsg-top a {
+	display: block;
+	text-decoration: none;
+	width: 100px;
+	height: 39px;
+	text-align: center;
+	line-height: 39px;
+	margin: 0 auto;
+	margin-top: 10px;
+	font-weight: bold;
+	border-radius: 5px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	background-color: #FAF0E6;
+}
+.personalMsg-top a:hover {
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}
+.personalMsg-top a:active {
+	border-bottom: 0px solid black;
+	border-right: 0px solid black;
+}
+.personalMsg-bottom {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	font-weight: bold;
+}
+.personalMsg-bottom p {
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+.personalMsg-bottom input {
+	height: 30px;
+	width: 240px;
+	border-bottom: 1px solid #A9A9A9;
+	outline: none;
+	background-color: #F5F5F5;
+}
+/*.personalMsg-bottom input:nth-last-child(2) {
+	height: 80px;
+	width: 396px;
+	border: 1px solid #A9A9A9;
+}*/
+.personalMsg-bottom input:last-child {
+	display: block;
+	height: 40px;
+	width: 120px;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+.personalMsg-bottom input:last-child:hover {
+	cursor: pointer;
+}
+.personalMsg-bottom textarea {
+	height: 100px;
+	width: 396px;
+	border: 1px solid #A9A9A9;
+	outline: none;
+	resize: none;
+	background-color: #F5F5F5;
+}
+.personalBlog {
+	display: none;
+	width: 998px;
+	background-color: white;
+	border-left: 1px solid #DCDCDC;
+	border-right: 1px solid #DCDCDC;
+}
+.title {
+	height: 60px;
+	width: 100%;
+	background-color: rgba(52, 118, 123, 0.29);
+	line-height: 60px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+.personalBlog ul {
+	width: 900px;
+	height: 500px;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-left: 49px;
+}
+.personalBlog ul li{
+	float: left;
+	width: 800px;
+	margin-top: 10px;
+	height: 31px;
+	line-height: 31px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.personalBlog ul li a {
+	color: black;
+	text-decoration: none;
+}
+.personalBlog ul li a:hover {
+	color: red;
+}
+.personalBlog ul .delete {
+	float: left;
+	display: inline-block;
+	width: 100px;
+	margin-top: 10px;
+	height: 31px;
+	background-color: rgba(52, 118, 123, 0.1);
+	text-align: center;
+	line-height: 31px;
+	cursor: pointer;
+}
+.personalBlog ul .delete:hover {
+	background-color: rgba(52, 118, 123, 0.29);
+}
+ .cpage {
+	width: 998px;
+	height: 30px;
+	 background-color: rgba(52, 118, 123, 0.29);
+	margin: 0 auto;
+	margin-top: 20px;
+	line-height: 30px;
+	text-align: center;
+}
+ .cpage a{
+	text-decoration: none;
+	margin-left: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+ .cpage a{
+	cursor: pointer;
+}
+.myAttention {
+	display: none;
+	width: 998px;
+	height: 630px;
+	background-color: white;
+	border-left: 1px solid #DCDCDC;
+	border-right: 1px solid #DCDCDC;
+}
+.myAttention .mainBody {
+	width: 900px;
+	height: 490px;
+	margin-top: 30px;
+}
+.blogger {
+	float: left;
+	width: 290px;
+	height: 114px;
+	background-color: #FAEBD7;
+	margin-top: 4px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+.blogger .blogger-photo {
+	float: left;
+	width: 66px;
+	height: 66px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 66px;
+}
+.blogger-photo img {
+	height: 100%;
+	width: 100%;
+	border-radius: 66px;
+}
+.blogger .blogger-msg {
+	float: left;
+	width: 204px;
+	height: 66px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.blogger-msg p {
+	line-height: 33px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.blogger-msg p:nth-child(1) {
+	font-weight: bold;
+}
+.blogger-msg p:nth-child(2) {
+	font-size: 12px;
+}
+.blogger .introduction {
+	float: left;
+	width: 280px;
+	height: 38px;
+	margin-left: 10px;
+	
+}
+.blogger .introduction p {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	line-height: 38px;
+	font-size: 14px;
+}
+/*.myAttention .change-page {*/
+/*	width: 880px;*/
+/*	height: 40px; */
+/*	margin: 0 auto;*/
+/*}*/
+/*.myAttention .change-page .contain {*/
+/*	float: right;*/
+/*}*/
+/*.myAttention .change-page a {*/
+/*	display: block;*/
+/*	width: 50px;*/
+/*	height: 100%;*/
+/*	float: left;*/
+/*	background-color: white;*/
+/*	text-align: center;*/
+/*	line-height: 40px;*/
+/*	border-radius: 20px;*/
+/*	text-decoration: none;*/
+/*	margin-right: 20px;*/
+/*	margin-top: 10px;*/
+/*}*/

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+				"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.personalblog.mapper.BloggerMapper">
+
+	<insert id="add" parameterType="com.personalblog.entity.Blogger"  useGeneratedKeys="true" keyProperty="id">
+		insert into blogger(name,password,sex,profession,introduction,last_login_time,register_time)
+		values(#{name},#{password},#{sex},#{profession},#{introduction},#{lastLoginTime},#{registerTime})
+	</insert>
+
+	<update id="delete" parameterType="int">
+		update blogger set flag=1 where id=#{id}
+	</update>
+
+	<update id="update" parameterType="com.personalblog.entity.Blogger">
+		update blogger set name=#{blogger.name},password=#{blogger.password},sex=#{blogger.sex},profession=#{blogger.profession},
+		introduction=#{blogger.introduction} where id = #{blogger.id}
+	</update>
+	<update id="updateHeadPortrait">
+		update blogger set head_portrait = #{newHeadPortrait} where id = #{bloggerId}
+	</update>
+
+	<resultMap id="bloggerResultMap" type="com.personalblog.entity.Blogger">
+		<id property="id" column="id"></id>
+		<result property="name" column="name"/>
+		<result property="password" column="password"/>
+		<result property="sex" column="sex"/>
+		<result property="profession" column="profession"/>
+		<result property="introduction" column="introduction"/>
+		<result property="lastLoginTime" column="last_login_time"/>
+		<result property="role" column="role"/>
+		<result property="headPortrait" column="head_portrait" javaType="String"/>
+		<result property="registerTime" column="register_time"/>
+	</resultMap>
+
+	<select id="getAllBloggers" resultMap="bloggerResultMap">
+		select * from blogger where flag=0
+	</select>
+
+	<select id="getBloggerNum" resultType="int">
+		select count(*) from blogger where flag = 0
+	</select>
+
+	<select id="getBloggerById" resultMap="bloggerResultMap" parameterType="int">
+		select * from blogger where id = #{bloggerId} and flag = 0
+	</select>
+
+	<select id="getBloggerByName" parameterType="String" resultMap="bloggerResultMap">
+		select * from blogger where name = #{bloggerName} and flag = 0
+	</select>
+
+	<select id="getThreeBlogger" resultMap="bloggerResultMap">
+		select * from blogger where flag=0  order by blog_num DESC
+	</select>
+
+	<select id="checkUser" resultMap="bloggerResultMap">
+		select * from blogger where flag = 0 and name = #{name } and password = #{password}
+	</select>
+</mapper>

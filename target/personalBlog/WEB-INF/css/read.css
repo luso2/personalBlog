@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*font: inherit;*/
+    /*vertical-align: baseline;*/
+}
+.mainbody {
+	width: 1350px;
+	min-height:600px;
+	height:auto!important;
+	margin: auto;
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+img {
+	max-width: 900px;
+}
+.left {
+	float: left;
+	width: 350px;
+	height: auto;
+}
+.blogMsg {
+	position: relative;
+	width: 340px;
+	height: 200px;
+	background-color: rgba(52, 118, 123, 0.31);
+	margin: 0 auto;
+	border-radius: 20px;
+}
+.blogMsg .top {
+	width: 100%;
+	height: 120px;
+	text-align: center;
+}
+.blogMsg .top img {
+	display: block;
+	position: relative;
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	margin: 0 auto;
+	top: 20px;
+}
+.blogMsg .top span {
+	position: relative;
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	top: 20px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.blogMsg ul {
+	height: 70px;
+	width: 140px;
+	margin: auto;
+}
+.blogMsg ul li {
+	float: left;
+	display: block;
+	width: 68px;
+	height: 100%;
+	text-align: center;
+}
+.blogMsg ul li span{
+	display: block;
+	height: 35px;
+	line-height: 35px;
+}
+.right {
+	float: left;
+	width: 1000px;
+	min-height: 600px;
+	height: auto !important;
+	background-color: rgba(52, 118, 123, 0.16);
+}
+.separate-trunkone {
+	width: 100%;
+	height: 50px;
+	background-color: #95958a;
+}
+.blog-date-praise {
+	width: 1000px;
+	height: 20px;
+	float: right;
+	line-height: 20px;
+	font-size: 12px;
+	color: #839496;
+}
+.blog-date {
+	float: right;
+	width: 220px;
+	height: 100%;
+}
+#blog-praise {
+	float: right;
+	width: 70px;
+	height: 100%;
+}
+#blog-praise img {
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+#blog-praise img:hover {
+	cursor: pointer;
+}
+#blog-praise #praise-num {
+	float: left;
+	display: block;
+	height: 100%;
+	width: 40px;
+	margin-left: 10px;
+    text-align: left;
+}
+.page-view {
+	float: right;
+	width: 100px;
+	height: 100%;
+}
+.page-view img{
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+.page-view span{
+	float: left;
+	display: block;
+	height: 100%;
+	width: 70px;
+	margin-left: 10px;
+    text-align: left;
+}
+.separate-trunktwo {
+	width: 1000px;
+	height: 50px;
+	background-color: #95958a;
+	float: right;
+}
+.right .title {
+	width: 100%;
+	text-align: center;
+	line-height: 60px;
+	font-size: 24px;
+}
+.right .content {
+	width: 980px;
+	height: auto;
+	table-layout:fixed;
+	word-break:break-all;
+	overflow:hidden;
+}
+.right .markdown-body editormd-preview-container img {
+	max-width: 900px;
+}
+#attention-char {
+	cursor: pointer;
+}

@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/*--start editing from here--*/
+
+a {
+    text-decoration: none;
+}
+
+.txt-rt {
+    text-align: right;
+}
+
+/* text align right */
+
+.txt-lt {
+    text-align: left;
+}
+
+/* text align left */
+
+.txt-center {
+    text-align: center;
+}
+
+/* text align center */
+
+.float-rt {
+    float: right;
+}
+
+/* float right */
+
+.float-lt {
+    float: left;
+}
+
+/* float left */
+
+.pos-relative {
+    position: relative;
+}
+
+/* Position Relative */
+
+.pos-absolute {
+    position: absolute;
+}
+
+/* Position Absolute */
+
+.vertical-base {
+    vertical-align: baseline;
+}
+
+/* vertical align baseline */
+
+.vertical-top {
+    vertical-align: top;
+}
+
+/* vertical align top */
+
+nav.vertical ul li {
+    display: block;
+}
+
+/* vertical menu */
+
+nav.horizontal ul li {
+    display: inline-block;
+}
+
+/* horizontal menu */
+
+img {
+    max-width: 100%;
+    padding-bottom: 1em;
+}
+
+/*--end reset--*/
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 100%;
+    background: url(../images/banner1.jpg)no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    text-align: center;
+}
+
+.content-top-agile {
+    background: rgba(0, 0, 0, 0.28);
+    padding: 3em;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.content-top-agile h2 {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: 4px;
+    word-spacing: 2px;
+}
+
+.content-bottom {
+    padding: 3em;
+    background: #fff;
+    border-radius: 0 0 25px 25px;
+}
+
+h1.title-agile {
+    padding: 1em 0 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3.2em;
+    letter-spacing: 3px;
+    font-weight: 100;
+    word-spacing: 6px;
+}
+
+section#hire {
+    max-width: 500px;
+    margin: 3em auto;
+}
+
+form .field {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+form .field label {
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #313A3D;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1em;
+    color: #777;
+    letter-spacing: 0.075em;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+}
+
+form .field input[type="text"],
+form .field textarea,
+form .field input[type="email"] {
+    border: none;
+    background: #E8E9EA;
+    width: 73%;
+    margin: 0;
+    padding: 14px 0;
+    padding-left: 27%;
+    color: #313A3D;
+    font-size: 1em;
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+textarea#msg {
+    height: 19px;
+}
+
+form .field input[type="text"]#msg,
+form .field input[type="email"]#email form .field textarea#msg {
+    height: 18px;
+    resize: none;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+}
+
+form .field input[type="text"]:focus,
+form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+    outline: none;
+}
+
+form .field input[type="text"]:focus#msg,
+form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+    padding-bottom: 150px;
+}
+
+form .field input[type="text"]:focus+label,
+form .field input[type="text"].focused+label,
+form .field textarea:focus+label,
+form .field textarea.focused+label {
+    width: 18%;
+    background: #F44336;
+    color: #fff;
+}
+
+form .field input[type="text"].focused+label,
+form .field textarea.focused+label {
+    color: #fff;
+}
+
+form .field:hover label {
+    width: 25%;
+    background: #f44336;
+    color: #fff;
+}
+
+form input[type="submit"] {
+    background: #F44336;
+    color: #fff;
+    -webkit-appearance: none;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    padding: 7px 0;
+    width: 100%;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #000000;
+    color: #F44336;
+}
+
+form input[type="submit"]:focus {
+    outline: none;
+    background: #000000;
+}
+form .bottom {
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+}
+form .bottom a {
+    display: inline-block;
+    height: 100%;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 1em;
+    width: 130px;
+    background: #F44336;
+    cursor: pointer;
+    color: white;
+}
+form .bottom a:hover {
+    background: #000000;
+    color: #F44336;
+}
+form .bottom #register {
+    float: left;
+}
+form .bottom #forget-password {
+    float: right;
+}
+
+.copy-wthree {
+    margin: 3em 0em;
+}
+
+/* copyright */
+
+.copy-wthree {
+    margin: 3em 0em;
+}
+
+.copy-wthree p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+}
+
+.copy-wthree p a {
+    color: #fff;
+}
+
+/* copyright */
+
+@media(max-width: 667px) {
+    h1.title-agile {
+        font-size: 2.8em;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width: 568px) {
+    .content-top-agile h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media(max-width: 480px) {
+    section#hire {
+        max-width: 400px;
+    }
+    h1.title-agile {
+        font-size: 2.5em;
+    }
+    .copy-wthree p {
+        font-size: 14px;
+        padding: 0 1em 1em;
+        line-height: 2;
+    }
+}
+
+@media(max-width: 414px) {
+    h1.title-agile {
+        font-size: 2.3em;
+    }
+    section#hire {
+        max-width: 350px;
+    }
+}
+
+@media(max-width: 414px) {
+    h1.title-agile {
+        font-size: 2.1em;
+    }
+    form .field label {
+        font-size: 13px;
+    }
+    form .field input[type="text"], form .field textarea, form .field input[type="email"] {
+        padding: 11px 0;
+    }
+}
+
+@media(max-width: 384px) {
+    .content-top-agile {
+        padding: 2em;
+    }
+}
+
+@media(max-width: 375px) {
+    h1.title-agile {
+        font-size: 1.8em;
+    }
+    .content-top-agile h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width: 320px) {
+    .content-bottom {
+        padding: 1em;
+    }
+    section#hire {
+        max-width: 285px;
+    }
+    h1.title-agile {
+        font-size: 1.6em;
+    }
+    .content-top-agile h2 {
+        font-size: 1.3em;
+    }
+}
